@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gotam-black text-gotam-cream antialiased;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  
+  ::selection {
+    @apply bg-gotam-gold text-gotam-black;
+  }
+}
+
+@layer components {
+  .luxury-heading {
+    @apply font-display font-light tracking-tight;
+  }
+  
+  .luxury-subheading {
+    @apply font-body font-light uppercase tracking-[0.25em] text-sm;
+  }
+  
+  .luxury-button {
+    @apply relative inline-flex items-center justify-center px-10 py-4 font-body font-medium text-sm uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden;
+  }
+  
+  .luxury-button-primary {
+    @apply luxury-button bg-gotam-gold text-gotam-black hover:bg-gotam-gold-light;
+  }
+  
+  .luxury-button-outline {
+    @apply luxury-button border border-gotam-cream/30 text-gotam-cream hover:border-gotam-gold hover:text-gotam-gold;
+  }
+  
+  .luxury-divider {
+    @apply w-20 h-px bg-gotam-gold;
+  }
+  
+  .luxury-card {
+    @apply bg-gotam-charcoal/50 backdrop-blur-sm border border-gotam-cream/5 transition-all duration-500 hover:border-gotam-gold/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a962;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b978;
+}
