@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CarDetailPage from './pages/CarDetailPage';
+import ChatBot from './components/ChatBot';
 
 const HomePage: React.FC = () => {
   return (
@@ -25,16 +26,20 @@ const HomePage: React.FC = () => {
         <Contact />
       </main>
       <Footer />
+      <ChatBot />
     </div>
   );
 };
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/car/:id" element={<CarDetailPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/car/:id" element={<CarDetailPage />} />
+      </Routes>
+      <ChatBot />
+    </>
   );
 }
 
