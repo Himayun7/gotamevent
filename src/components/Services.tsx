@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from '../hooks/useInView';
-import { Heart, Building2, Plane, Calendar, Camera, Crown } from 'lucide-react';
+import { Heart, Calendar, Camera } from 'lucide-react';
 
 const Services: React.FC = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -12,20 +12,6 @@ const Services: React.FC = () => {
       description:
         'Sublimez le plus beau jour de votre vie avec nos véhicules d\'exception. Décoration florale, champagne et chauffeur en livrée inclus.',
       image: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    },
-    {
-      icon: Building2,
-      title: 'Corporate',
-      description:
-        'Impressionnez vos clients et partenaires avec un service de transport à la hauteur de votre image. Facturation entreprise disponible.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    },
-    {
-      icon: Plane,
-      title: 'Transferts Aéroport',
-      description:
-        'Accueil personnalisé à votre arrivée, suivi des vols en temps réel et assistance bagages pour un voyage sans stress.',
-      image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     },
     {
       icon: Calendar,
@@ -41,13 +27,6 @@ const Services: React.FC = () => {
         'Nos véhicules sont disponibles pour vos productions audiovisuelles, séances photos et tournages publicitaires.',
       image: 'https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     },
-    {
-      icon: Crown,
-      title: 'Conciergerie VIP',
-      description:
-        'Un service sur-mesure pour répondre à toutes vos demandes : réservations, accès privilégiés, expériences exclusives.',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    },
   ];
 
   return (
@@ -59,9 +38,8 @@ const Services: React.FC = () => {
       <div className="max-w-[1800px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div
-          className={`text-center mb-16 lg:mb-24 transition-all duration-1000 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mb-16 lg:mb-24 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <p className="luxury-subheading text-gotam-gold mb-6">Nos Prestations</p>
           <h2 className="luxury-heading text-display-lg text-gotam-cream mb-8">
@@ -69,7 +47,7 @@ const Services: React.FC = () => {
           </h2>
           <div className="luxury-divider mx-auto mb-8" />
           <p className="font-body font-light text-gotam-cream/70 text-lg max-w-2xl mx-auto">
-            Chaque prestation est pensée dans les moindres détails pour 
+            Chaque prestation est pensée dans les moindres détails pour
             transformer vos événements en souvenirs inoubliables
           </p>
         </div>
@@ -79,9 +57,8 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group relative overflow-hidden transition-all duration-700 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
+              className={`group relative overflow-hidden transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                }`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               {/* Background Image */}
@@ -117,9 +94,8 @@ const Services: React.FC = () => {
 
         {/* Bottom CTA */}
         <div
-          className={`text-center mt-16 lg:mt-24 transition-all duration-1000 delay-700 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mt-16 lg:mt-24 transition-all duration-1000 delay-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <p className="font-body font-light text-gotam-cream/60 mb-6">
             Vous avez un projet spécifique ?

@@ -43,9 +43,8 @@ const Introduction: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-32">
           {/* Text Content */}
           <div
-            className={`transition-all duration-1000 ${
-              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+            className={`transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <p className="luxury-subheading text-gotam-gold mb-6">
               Depuis 2010
@@ -57,14 +56,14 @@ const Introduction: React.FC = () => {
             </h2>
             <div className="luxury-divider mb-8" />
             <p className="font-body font-light text-gotam-cream/70 text-lg leading-relaxed mb-6">
-              Gotam Events incarne l'excellence du transport de luxe parisien. 
-              Notre passion pour l'automobile d'exception et notre engagement 
-              envers un service irréprochable font de chaque trajet une 
+              Gotam Events incarne l'excellence du transport de luxe parisien.
+              Notre passion pour l'automobile d'exception et notre engagement
+              envers un service irréprochable font de chaque trajet une
               expérience mémorable.
             </p>
             <p className="font-body font-light text-gotam-cream/70 text-lg leading-relaxed mb-10">
-              Des mariages somptueux aux événements corporate prestigieux, 
-              nous accompagnons les moments les plus précieux de votre vie 
+              Des mariages somptueux aux événements corporate prestigieux,
+              nous accompagnons les moments les plus précieux de votre vie
               avec élégance et raffinement.
             </p>
             <a href="#services" className="luxury-button-outline">
@@ -74,14 +73,13 @@ const Introduction: React.FC = () => {
 
           {/* Image */}
           <div
-            className={`relative transition-all duration-1000 delay-300 ${
-              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+            className={`relative transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <div className="relative aspect-[4/5] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
-                alt="Luxury chauffeur service"
+                src="/rollsroyce-ghost/rollsroyce-ghost-road.png"
+                alt="Rolls-Royce Ghost - Luxury chauffeur service"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gotam-black/40 to-transparent" />
@@ -103,9 +101,8 @@ const Introduction: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`text-center lg:text-left transition-all duration-700 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`text-center lg:text-left transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: `${600 + index * 150}ms` }}
             >
               <feature.icon

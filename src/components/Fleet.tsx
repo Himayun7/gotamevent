@@ -12,7 +12,6 @@ const Fleet: React.FC = () => {
     { id: 'all', name: 'Toute la Collection' },
     { id: 'sedan', name: 'Berlines' },
     { id: 'suv', name: 'SUV' },
-    { id: 'classic', name: 'Classiques' },
   ];
 
   const filteredVehicles =
@@ -63,8 +62,8 @@ const Fleet: React.FC = () => {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`font-body text-xs uppercase tracking-[0.2em] px-6 py-3 transition-all duration-400 ${activeCategory === category.id
-                  ? 'text-gotam-gold border-b-2 border-gotam-gold'
-                  : 'text-gotam-cream/60 hover:text-gotam-cream border-b-2 border-transparent'
+                ? 'text-gotam-gold border-b-2 border-gotam-gold'
+                : 'text-gotam-cream/60 hover:text-gotam-cream border-b-2 border-transparent'
                 }`}
             >
               {category.name}

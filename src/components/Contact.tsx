@@ -39,12 +39,12 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '+33 1 23 45 67 89\n+33 6 12 34 56 78',
+      content: '+33 7 67 71 58 48\n+33 7 87 27 82 87',
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@gotam-events.com\nreservation@gotam-events.com',
+      content: 'gotamevents@gmail.com',
     },
     {
       icon: Clock,
@@ -73,9 +73,8 @@ const Contact: React.FC = () => {
       <div className="relative max-w-[1800px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div
-          className={`text-center mb-16 lg:mb-24 transition-all duration-1000 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mb-16 lg:mb-24 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <p className="luxury-subheading text-gotam-gold mb-6">Contact</p>
           <h2 className="luxury-heading text-display-lg text-gotam-cream mb-8">
@@ -83,7 +82,7 @@ const Contact: React.FC = () => {
           </h2>
           <div className="luxury-divider mx-auto mb-8" />
           <p className="font-body font-light text-gotam-cream/70 text-lg max-w-2xl mx-auto">
-            Notre équipe est à votre disposition pour créer une prestation 
+            Notre équipe est à votre disposition pour créer une prestation
             sur-mesure adaptée à vos besoins les plus exigeants
           </p>
         </div>
@@ -91,17 +90,15 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-[1fr,1.5fr] gap-16 lg:gap-24">
           {/* Contact Information */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
-              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+            className={`transition-all duration-1000 delay-200 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <div className="space-y-8">
               {contactInfo.map((item, index) => (
                 <div
                   key={item.title}
-                  className={`flex gap-5 transition-all duration-700 ${
-                    isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
+                  className={`flex gap-5 transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
                   style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-gotam-gold/30">
@@ -121,9 +118,8 @@ const Contact: React.FC = () => {
 
             {/* Map Placeholder */}
             <div
-              className={`mt-12 aspect-[4/3] relative overflow-hidden border border-gotam-cream/10 transition-all duration-1000 delay-600 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`mt-12 aspect-[4/3] relative overflow-hidden border border-gotam-cream/10 transition-all duration-1000 delay-600 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
             >
               <img
                 src="https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop"
@@ -142,9 +138,8 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div
-            className={`transition-all duration-1000 delay-400 ${
-              isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+            className={`transition-all duration-1000 delay-400 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <div className="bg-gotam-charcoal/30 backdrop-blur-sm border border-gotam-cream/5 p-8 lg:p-12">
               {isSubmitted ? (
@@ -217,7 +212,7 @@ const Contact: React.FC = () => {
                         value={formState.phone}
                         onChange={handleChange}
                         className="w-full bg-transparent border border-gotam-cream/20 px-5 py-4 font-body text-gotam-cream placeholder-gotam-cream/30 focus:border-gotam-gold focus:outline-none transition-colors duration-400"
-                        placeholder="+33 6 00 00 00 00"
+                        placeholder="+33 7 00 00 00 00"
                       />
                     </div>
 
@@ -238,13 +233,9 @@ const Contact: React.FC = () => {
                         className="w-full bg-gotam-charcoal border border-gotam-cream/20 px-5 py-4 font-body text-gotam-cream focus:border-gotam-gold focus:outline-none transition-colors duration-400 appearance-none cursor-pointer"
                       >
                         <option value="">Sélectionnez un service</option>
-                        <option value="wedding">Mariage</option>
-                        <option value="corporate">Corporate</option>
-                        <option value="airport">Transfert Aéroport</option>
-                        <option value="event">Événement Privé</option>
-                        <option value="shooting">Shooting / Cinéma</option>
-                        <option value="concierge">Conciergerie VIP</option>
-                        <option value="other">Autre</option>
+                        <option value="wedding">Mariages</option>
+                        <option value="event">Événements Privés</option>
+                        <option value="shooting">Shootings & Cinéma</option>
                       </select>
                     </div>
                   </div>

@@ -6,7 +6,6 @@ interface Testimonial {
   id: number;
   name: string;
   role: string;
-  image: string;
   content: string;
   rating: number;
   event: string;
@@ -19,43 +18,30 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Sophie & Pierre Martin',
-      role: 'Mariés en Juin 2024',
-      image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+      name: 'Karim',
+      role: 'Client Mariage',
       content:
-        'Une prestation absolument parfaite pour notre mariage. La Rolls-Royce Phantom était sublime, le chauffeur d\'une élégance et d\'une discrétion remarquables. Tous nos invités ont été impressionnés. Merci Gotam Events pour avoir rendu ce jour encore plus magique.',
-      rating: 5,
+        'Nous avons loué une magnifique Rolls Royce pour notre mariage, et tout était absolument parfait. La voiture a ajouté une touche de glamour à notre journée. Le chauffeur était ponctuel, professionnel et très sympathique. Merci d\'avoir contribué à rendre ce moment si spécial. Je recommande à 100 % !',
+      rating: 4,
       event: 'Mariage',
     },
     {
       id: 2,
-      name: 'Jean-Marc Dubois',
-      role: 'Directeur Général, Luxe Corp',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+      name: 'Lucas',
+      role: 'Client Paris Tour',
       content:
-        'Nous faisons appel à Gotam Events pour tous nos déplacements VIP et événements corporate. Le professionnalisme est irréprochable, les véhicules toujours impeccables. Un partenaire de confiance qui comprend les exigences du monde des affaires.',
+        'J\'ai loué une voiture avec chauffeur pour visiter Paris avec ma chérie et c\'était incroyable ! La voiture était somptueuse, et nous nous sommes sentis comme des VIP tout au long de la journée. Une expérience que je referai sans hésiter pour mes prochains séjours ou événements privés. Bravo à toute l\'équipe pour ce service irréprochable !',
       rating: 5,
-      event: 'Corporate',
+      event: 'Événement Privé',
     },
     {
       id: 3,
-      name: 'Marie-Claire Fontaine',
-      role: 'Organisatrice d\'Événements',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+      name: 'Sara',
+      role: 'Client Anniversaire',
       content:
-        'En tant que wedding planner, je recommande Gotam Events les yeux fermés. Leur attention aux détails, leur flexibilité et leur capacité à s\'adapter à toutes les situations font d\'eux un partenaire incontournable pour mes événements haut de gamme.',
+        'Pour mon anniversaire, je voulais quelque chose de spécial, et louer une voiture de luxe était l\'idée parfaite. L\'expérience était au-delà de mes attentes : une voiture impeccable, un service premium et une vraie sensation de luxe tout au long de la soirée. J\'ai impressionné tous mes invités, et j\'ai adoré vivre ce moment. Merci pour cette expérience unique !',
       rating: 5,
-      event: 'Événementiel',
-    },
-    {
-      id: 4,
-      name: 'Laurent Mercier',
-      role: 'Producteur Audiovisuel',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      content:
-        'Pour notre dernier tournage publicitaire, nous avions besoin de véhicules d\'exception. Gotam Events a su répondre à toutes nos exigences techniques et esthétiques. Une collaboration fluide et des résultats à la hauteur de nos attentes.',
-      rating: 5,
-      event: 'Production',
+      event: 'Anniversaire',
     },
   ];
 
@@ -80,9 +66,8 @@ const Testimonials: React.FC = () => {
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div
-          className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <p className="luxury-subheading text-gotam-gold mb-6">Témoignages</p>
           <h2 className="luxury-heading text-display-lg text-gotam-cream mb-8">
@@ -93,9 +78,8 @@ const Testimonials: React.FC = () => {
 
         {/* Testimonial Carousel */}
         <div
-          className={`relative transition-all duration-1000 delay-300 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`relative transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           {/* Main Testimonial */}
           <div className="relative bg-gotam-black/50 backdrop-blur-sm border border-gotam-cream/5 p-8 lg:p-16">
@@ -127,13 +111,6 @@ const Testimonials: React.FC = () => {
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gotam-gold/30">
-                    <img
-                      src={testimonials[activeIndex].image}
-                      alt={testimonials[activeIndex].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
                   <div>
                     <p className="font-display text-lg text-gotam-cream">
                       {testimonials[activeIndex].name}
@@ -176,37 +153,17 @@ const Testimonials: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-400 ${
-                  index === activeIndex
-                    ? 'bg-gotam-gold w-8'
-                    : 'bg-gotam-cream/30 hover:bg-gotam-cream/50'
-                }`}
+                className={`w-2 h-2 rounded-full transition-all duration-400 ${index === activeIndex
+                  ? 'bg-gotam-gold w-8'
+                  : 'bg-gotam-cream/30 hover:bg-gotam-cream/50'
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
         </div>
 
-        {/* Trust Badges */}
-        <div
-          className={`mt-20 pt-16 border-t border-gotam-cream/10 transition-all duration-1000 delay-500 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <p className="text-center font-body text-xs uppercase tracking-[0.2em] text-gotam-cream/40 mb-8">
-            Reconnus par les plus grandes marques
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20 opacity-40">
-            {['LVMH', 'CHANEL', 'DIOR', 'HERMÈS', 'CARTIER'].map((brand) => (
-              <span
-                key={brand}
-                className="font-display text-xl lg:text-2xl font-light text-gotam-cream tracking-wider"
-              >
-                {brand}
-              </span>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );
