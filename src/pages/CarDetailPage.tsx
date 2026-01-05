@@ -93,8 +93,8 @@ const CarDetailPage: React.FC = () => {
                                             key={index}
                                             onClick={() => setSelectedImage(index)}
                                             className={`relative aspect-[4/3] w-24 overflow-hidden rounded-sm transition-all duration-300 ${selectedImage === index
-                                                    ? 'ring-2 ring-gotam-gold ring-offset-2 ring-offset-gotam-black'
-                                                    : 'opacity-60 hover:opacity-100'
+                                                ? 'ring-2 ring-gotam-gold ring-offset-2 ring-offset-gotam-black'
+                                                : 'opacity-60 hover:opacity-100'
                                                 }`}
                                         >
                                             <img
@@ -117,11 +117,11 @@ const CarDetailPage: React.FC = () => {
                                     <h1 className="font-display text-4xl lg:text-5xl xl:text-6xl text-gotam-cream mb-4 font-light tracking-tight">
                                         {vehicle.name}
                                     </h1>
-                                    <div className="flex items-baseline gap-2">
+                                    {/* <div className="flex items-baseline gap-2">
                                         <span className="font-body text-sm text-gotam-cream/50">À partir de</span>
                                         <span className="font-display text-3xl text-gotam-gold">{vehicle.priceFrom}</span>
                                         <span className="font-body text-sm text-gotam-cream/50">/ jour</span>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 <div className="luxury-divider" />
@@ -132,7 +132,7 @@ const CarDetailPage: React.FC = () => {
                                 </p>
 
                                 {/* Quick Specs */}
-                                <div className="grid grid-cols-2 gap-4">
+                                {/* <div className="grid grid-cols-2 gap-4">
                                     <div className="luxury-card p-4 flex items-center gap-4">
                                         <Users className="text-gotam-gold" size={24} strokeWidth={1.5} />
                                         <div>
@@ -147,7 +147,7 @@ const CarDetailPage: React.FC = () => {
                                             <p className="font-display text-xl text-gotam-cream">Auto</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 {/* Features */}
                                 <div>
@@ -179,7 +179,7 @@ const CarDetailPage: React.FC = () => {
                 </section>
 
                 {/* Specifications Section */}
-                <section className="py-20 lg:py-32">
+                {/* <section className="py-20 lg:py-32">
                     <div className="max-w-[1800px] mx-auto px-6 lg:px-12">
                         <div className="text-center mb-12">
                             <p className="luxury-subheading text-gotam-gold mb-4">Performance</p>
@@ -220,7 +220,7 @@ const CarDetailPage: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Recommended Vehicles Section */}
                 <section className="py-20 lg:py-32 bg-gotam-charcoal">
@@ -247,11 +247,11 @@ const CarDetailPage: React.FC = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gotam-black/80 via-transparent to-transparent" />
                                         {/* Price Badge */}
-                                        <div className="absolute top-4 right-4 bg-gotam-black/80 backdrop-blur-sm px-4 py-2 border border-gotam-gold/30">
+                                        {/* <div className="absolute top-4 right-4 bg-gotam-black/80 backdrop-blur-sm px-4 py-2 border border-gotam-gold/30">
                                             <p className="font-body text-xs text-gotam-gold">
                                                 À partir de {rec.priceFrom}
                                             </p>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     {/* Content */}

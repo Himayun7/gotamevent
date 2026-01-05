@@ -13,9 +13,8 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <div
-          className={`absolute inset-0 transition-all duration-[2000ms] ${
-            isLoaded ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
-          }`}
+          className={`absolute inset-0 transition-all duration-[2000ms] ${isLoaded ? 'scale-100 opacity-100' : 'scale-110 opacity-0'
+            }`}
         >
           <img
             src="https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
@@ -33,19 +32,17 @@ const Hero: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           {/* Subtitle */}
           <p
-            className={`luxury-subheading text-gotam-gold mb-6 lg:mb-8 opacity-0 ${
-              isLoaded ? 'animate-fade-in-down' : ''
-            }`}
+            className={`luxury-subheading text-gotam-gold mb-6 lg:mb-8 opacity-0 ${isLoaded ? 'animate-fade-in-down' : ''
+              }`}
             style={{ animationDelay: '500ms' }}
           >
-            Paris • Monaco • Côte d'Azur
+            Paris Île-de-France
           </p>
 
           {/* Main Heading */}
           <h1
-            className={`luxury-heading text-display-xl text-gotam-cream mb-8 opacity-0 ${
-              isLoaded ? 'animate-fade-in-up' : ''
-            }`}
+            className={`luxury-heading text-display-xl text-gotam-cream mb-8 opacity-0 ${isLoaded ? 'animate-fade-in-up' : ''
+              }`}
             style={{ animationDelay: '700ms' }}
           >
             L'Excellence du
@@ -55,9 +52,8 @@ const Hero: React.FC = () => {
 
           {/* Divider */}
           <div
-            className={`flex justify-center mb-8 opacity-0 ${
-              isLoaded ? 'animate-fade-in' : ''
-            }`}
+            className={`flex justify-center mb-8 opacity-0 ${isLoaded ? 'animate-fade-in' : ''
+              }`}
             style={{ animationDelay: '1000ms' }}
           >
             <div className="luxury-divider" />
@@ -65,9 +61,8 @@ const Hero: React.FC = () => {
 
           {/* Description */}
           <p
-            className={`font-body font-light text-lg lg:text-xl text-gotam-cream/80 max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 ${
-              isLoaded ? 'animate-fade-in-up' : ''
-            }`}
+            className={`font-body font-light text-lg lg:text-xl text-gotam-cream/80 max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 ${isLoaded ? 'animate-fade-in-up' : ''
+              }`}
             style={{ animationDelay: '1200ms' }}
           >
             Location de véhicules de prestige et services de transport exclusifs
@@ -76,9 +71,8 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 ${
-              isLoaded ? 'animate-fade-in-up' : ''
-            }`}
+            className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 ${isLoaded ? 'animate-fade-in-up' : ''
+              }`}
             style={{ animationDelay: '1400ms' }}
           >
             <a href="#fleet" className="luxury-button-primary">
@@ -93,9 +87,8 @@ const Hero: React.FC = () => {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 ${
-          isLoaded ? 'animate-fade-in' : ''
-        }`}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 ${isLoaded ? 'animate-fade-in' : ''
+          }`}
         style={{ animationDelay: '2000ms' }}
       >
         <a

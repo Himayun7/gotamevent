@@ -21,7 +21,7 @@ export const vehicles: Vehicle[] = [
         id: 1,
         name: 'Rolls-Royce Ghost',
         category: 'sedan',
-        image: '/rollsroyce-ghost/rollsroyce-ghost.png',
+        image: '/rollsroyce-ghost/rr-ghost.png',
         passengers: 4,
         features: ['Champagne Bar', 'Ciel Étoilé', 'Massage'],
         priceFrom: '1 500€',
@@ -33,10 +33,10 @@ export const vehicles: Vehicle[] = [
             topSpeed: '250 km/h',
         },
         gallery: [
-            '/rollsroyce-ghost/rollsroyce-ghost.png',
-            '/rollsroyce-ghost/rollsroyce-ghost-side.png',
-            '/rollsroyce-ghost/rollsroyce-ghost-top.png',
-            '/rollsroyce-ghost/rollsroyce-ghost-innner.png',
+            '/rollsroyce-ghost/rr-ghost.png',
+            '/rollsroyce-ghost/rr-ghost-top.png',
+            '/rollsroyce-ghost/rollsroyce-ghost-interior-1.jpg',
+            '/rollsroyce-ghost/rollsroyce-ghost-interior.jpg',
         ],
     },
     {
@@ -57,8 +57,8 @@ export const vehicles: Vehicle[] = [
         gallery: [
             '/mercedes-benz/maybach.png',
             '/mercedes-benz/maybach-side.png',
-            '/mercedes-benz/maybach-top.png',
-            '/mercedes-benz/maybach-inner.png',
+            '/mercedes-benz/maybach-interior-1.jpg',
+            '/mercedes-benz/maybach-interior.jpg',
         ],
     },
     {
@@ -79,8 +79,8 @@ export const vehicles: Vehicle[] = [
         gallery: [
             '/g63/g63.png',
             '/g63/g63-side.png',
-            '/g63/g63-top.png',
-            '/g63/g63-inner.png',
+            '/g63/g63-interior1.jpg',
+            '/g63/g63-interior.jpg',
         ],
     },
 ];

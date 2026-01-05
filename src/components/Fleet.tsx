@@ -90,11 +90,11 @@ const Fleet: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gotam-black/80 via-transparent to-transparent" />
                 {/* Price Badge */}
-                <div className="absolute top-4 right-4 bg-gotam-black/80 backdrop-blur-sm px-4 py-2 border border-gotam-gold/30">
+                {/* <div className="absolute top-4 right-4 bg-gotam-black/80 backdrop-blur-sm px-4 py-2 border border-gotam-gold/30">
                   <p className="font-body text-xs text-gotam-gold">
                     À partir de {vehicle.priceFrom}
                   </p>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
